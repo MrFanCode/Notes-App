@@ -9,5 +9,5 @@ Notes App created with Django web framework.
 - Then run the app `python3 manage.py runserver`
 
 <hr>
-## App Preview 
+<h2> App Preview </h2>
 <img width="850" alt="Preview" src="https://github.com/MrFanCode/Notes-App/blob/main/preview.png">
