@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Remove note{% endblock %}
+
+
+{% block content %}
+
+<h1>Remove note</h1>
+<hr>
+
+<form method="POST" action="{% url 'remove notes' %}">
+	
+	{% csrf_token %}
+	{{ form }}
+	<br>
+	<button class="btn btn-danger">Remove</button>
+</form>
+
+{% endblock %}

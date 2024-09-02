@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Dashboard{% endblock %}
+
+
+
+{% block content %}
+
+<h1>Notes Dashboard</h1>
+<button class="btn btn-success"><a style="color: #f2f2f2; text-decoration: none;" href="{% url 'add notes' %}">Add</a></button>&nbsp;
+<button class="btn btn-danger"><a style="color: #f2f2f2; text-decoration: none;" href="{% url 'remove notes' %}">Remove</a></button>
+<hr>
+
+{% for note in notes %}
+
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded card w-75 mb-3">
+	<div class="card-body">
+		<h5 class="card-title">{{ note.title }}</h5>
+		<p class="card-text">{{ note.notes }}</p>
+		<hr>
+		<p class="card-text">{{ note.date_added }}</p>
+	</div>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

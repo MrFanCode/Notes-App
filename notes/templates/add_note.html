@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Add Note{% endblock %}
+
+
+{% block content %}
+
+<h1>Add Notes</h1>
+<hr>
+
+<form method="POST" action="{% url 'add notes' %}">
+	{% csrf_token %}
+	{{ form }}
+	<br>
+	<button class="btn btn-primary" name="add">Add note</button>
+</form>
+
+
+
+{% endblock %}
